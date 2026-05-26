@@ -9,6 +9,7 @@ public class NewBehaviourScript : MonoBehaviour
     public float moveForce = 100f;
     public float maxSpeed = 5;
     public Rigidbody2D rb;
+    public bool bFaceRight = true;
 
     void Awake()
     {
@@ -35,8 +36,21 @@ public class NewBehaviourScript : MonoBehaviour
             {
                 rb.velocity = new Vector2(Mathf.Sign(rb.velocity.x) * maxSpeed, rb.velocity.y);
             }
+
+            if (fInput > 0 && !bFaceRight)
+                flip();
+            if (fInput < 0 && bFaceRight)
+                flip();
+            void flip()
+            {
+                Vector3 theScale = transform.localScale;
+                theScale.x *= -1;
+                transform.localScale = theScale;
+                bFaceRight = !bFaceRight;
+            }
         }
     }
+    
     // Update is called once per frame
     void Update()
     {
