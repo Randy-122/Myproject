@@ -10,11 +10,14 @@ public class NewBehaviourScript : MonoBehaviour
     public float maxSpeed = 5;
     public Rigidbody2D rb;
     public bool bFaceRight = true;
-
+    public Transform mGroundCheck;
+    public bool bJump = false;
+    public float jumpForce = 1000;
     void Awake()
     {
         Debug.Log("Awake called");
         rb = GetComponent<Rigidbody2D>();
+        mGroundCheck = transform.Find("GroundCheck");
     }
     void Start()
     {
@@ -48,14 +51,25 @@ public class NewBehaviourScript : MonoBehaviour
                 transform.localScale = theScale;
                 bFaceRight = !bFaceRight;
             }
+            if (bJump) 
+            {
+                rb.AddForce(new Vector2(0, jumpForce));
+                bJump = false;
+            }
         }
     }
     
     // Update is called once per frame
     void Update()
     {
-        
+        if (Physics2D.Linecast(transform.position, mGroundCheck.position, 
+            1 << LayerMask.NameToLayer("Ground")) && UnityEngine.Input.GetButtonDown("Jump")) 
+        {
+            bJump = true;
+        }
+
+
     }
 
-    
+
 }
