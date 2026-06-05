@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Windows;
 
-public class NewBehaviourScript : MonoBehaviour
+public class PlayerControl : MonoBehaviour
 {
     // Start is called before the first frame update
     public float moveForce = 100f;
