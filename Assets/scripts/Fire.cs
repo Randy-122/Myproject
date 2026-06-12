@@ -9,10 +9,11 @@ public class Gun : MonoBehaviour
     [SerializeField] public PlayerControl playerCtrl;
 
     AudioSource audioSource;
-
+    private Animator animator;
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();
+        animator = transform.parent.GetComponent<Animator>();
     }
 
     void Update()
@@ -23,7 +24,7 @@ public class Gun : MonoBehaviour
             if (Input.GetButtonDown("Fire1"))
             {
                 if (audioSource != null) audioSource.Play();
-
+                animator.SetTrigger("shoot");
                 float zRotation = playerCtrl.bFaceRight ? 0f : 180f;
 
                 // 3. 实例化 Rigidbody2D 组件
