@@ -9,9 +9,17 @@ public class Destoryer2s : MonoBehaviour
     public Rigidbody2D rd;
     void Start()
     {
+        if (rd == null) 
+        {
+            return;
+        }
         Destroy(rd.gameObject, 2f);
     }
 
+    public void myDestory ()
+    {
+        Destroy(transform.gameObject);
+    }
     // Update is called once per frame
     void Update()
     {

@@ -13,11 +13,13 @@ public class PlayerControl : MonoBehaviour
     public Transform mGroundCheck;
     public bool bJump = false;
     public float jumpForce = 1000;
+    private Animator mAnimator;
     void Awake()
     {
         Debug.Log("Awake called");
         rb = GetComponent<Rigidbody2D>();
         mGroundCheck = transform.Find("GroundCheck");
+        mAnimator = GetComponent<Animator>();
     }
     void Start()
     {
@@ -25,9 +27,12 @@ public class PlayerControl : MonoBehaviour
     }
     private void FixedUpdate()
     {
+
         if (rb != null)
         {
             float fInput = UnityEngine.Input.GetAxis("Horizontal");
+            mAnimator.SetFloat("speed", Mathf.Abs(fInput));
+
 
             if (Mathf.Abs(rb.velocity.x) < maxSpeed)
             {
@@ -53,9 +58,20 @@ public class PlayerControl : MonoBehaviour
             }
             if (bJump) 
             {
+                mAnimator.SetTrigger("jump");
                 rb.AddForce(new Vector2(0, jumpForce));
                 bJump = false;
             }
+            if (Physics2D.Linecast(transform.position, mGroundCheck.position,
+            1 << LayerMask.NameToLayer("Ground")))
+            {
+                mAnimator.SetTrigger("ground");
+            }
+            else {
+                mAnimator.ResetTrigger("jump");
+                mAnimator.ResetTrigger("ground");
+            }
+
         }
     }
     
@@ -65,6 +81,7 @@ public class PlayerControl : MonoBehaviour
         if (Physics2D.Linecast(transform.position, mGroundCheck.position, 
             1 << LayerMask.NameToLayer("Ground")) && UnityEngine.Input.GetButtonDown("Jump")) 
         {
+            
             bJump = true;
         }
 
