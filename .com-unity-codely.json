@@ -1,13 +1,9 @@
 {
-  "unity_port": -1,
-  "created_date": "2026-05-19T08:27:12.8645970Z",
+  "unity_port": 57826,
+  "created_date": "2026-06-26T06:39:05.9388973Z",
   "project_path": "D:/unitylearn/HelloWorld/Myproject/Assets",
   "reloading": false,
-  "reason": "stopped",
+  "reason": "ready",
   "seq": 1,
-<<<<<<< HEAD
-  "last_heartbeat": "2026-06-26T06:28:20.0356542Z"
-=======
-  "last_heartbeat": "2026-06-16T09:28:50.7136918Z"
->>>>>>> parent of d39a5b2 (623)
+  "last_heartbeat": "2026-06-26T06:39:22.6312478Z"
 }
