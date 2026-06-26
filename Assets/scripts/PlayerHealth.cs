@@ -92,7 +92,7 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
-    void UpdateHealthBar() 
+    public void UpdateHealthBar() 
     {
         healthBar.material.color = Color.Lerp(Color.red, Color.green, health / 100f);
         healthBar.transform.localScale = new Vector3(health / 100f, 1, 1);

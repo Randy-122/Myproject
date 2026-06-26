@@ -9,14 +9,14 @@ public class ShipController : MonoBehaviour
     [SerializeField] private float moveSpeed = 3.5f;    // 移动速度
 
     [Header("生命系统")]
-    [SerializeField] private int maxHealth = 2;         // 默认2滴血
+    [SerializeField] private float maxHealth = 2f;         // 默认2滴血
     [SerializeField] private Sprite fullHealthSprite;   // 满血素材
     [SerializeField] private Sprite lowHealthSprite;    // 残血素材
     [SerializeField] private Sprite deathSprite;        // 死亡素材
 
     private Rigidbody2D rb;
     private SpriteRenderer spriteRenderer;
-    private int currentHealth;
+    private float currentHealth;
     private bool isDead;
     private bool isFacingRight = true; // 明确声明朝向（默认向右）
 

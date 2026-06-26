@@ -16,6 +16,12 @@ public class Rocket : MonoBehaviour
         if (collision.CompareTag("Enemy") && enemy != null)
         {
             enemy.ApplyDamage(1); // 安全调用扣血
+            if (explosion != null)
+            {
+                Quaternion randomRot = Quaternion.Euler(0, 0, Random.Range(0f, 180f));
+                Instantiate(explosion, transform.position, randomRot);
+            }
+            Destroy(gameObject);
         }
         // 4. ✅ 补充：输出更精准的错误日志（区分层级问题）
         else if (collision.CompareTag("Enemy") && enemy == null)

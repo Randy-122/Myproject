@@ -5027,7 +5027,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17a6367d7b637cb43946f81a50b4fdfb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Explotion: {fileID: 1748257195654060673, guid: 94f05559e1714b646a08b580a3476304, type: 3}
+  explosion: {fileID: 1748257195654060673, guid: 94f05559e1714b646a08b580a3476304, type: 3}
 --- !u!82 &3967369105167375691
 AudioSource:
   m_ObjectHideFlags: 0
