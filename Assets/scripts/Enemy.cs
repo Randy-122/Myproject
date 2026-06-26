@@ -81,7 +81,8 @@ public class ShipController : MonoBehaviour
         spriteRenderer.sprite = deathSprite;
 
         // 1. 所有碰撞体设为Trigger（停止碰撞检测）
-        foreach (Collider2D col in GetComponents<Collider2D>())
+        Collider2D[] cols = GetComponents<Collider2D>();
+        foreach (Collider2D col in cols)
         {
             col.isTrigger = true;
         }
