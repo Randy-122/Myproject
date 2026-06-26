@@ -5,5 +5,9 @@
   "reloading": false,
   "reason": "stopped",
   "seq": 1,
+<<<<<<< HEAD
   "last_heartbeat": "2026-06-26T06:28:20.0356542Z"
+=======
+  "last_heartbeat": "2026-06-16T09:28:50.7136918Z"
+>>>>>>> parent of d39a5b2 (623)
 }

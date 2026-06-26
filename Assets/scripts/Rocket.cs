@@ -23,11 +23,6 @@ public class Rocket : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        //伤害敌人
-        if (collision.CompareTag("Enemy"))
-        {
-            collision.GetComponent<Enemy>().Hurt();
-        }
         if (collision.CompareTag("Player"))
         {
             return;
