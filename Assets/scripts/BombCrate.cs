@@ -12,12 +12,12 @@ public class BombCrate : MonoBehaviour
     {
         if (anim == null) 
         {
-            anim = GetComponent<Animator>();
+            anim = GetComponentInParent<Animator>();
         }
         if (other.tag == "Player")
         {
             AudioSource.PlayClipAtPoint(pickupClip, transform.position);
-            //other.GetComponent<LayBombs>().bombCount++;//
+            other.GetComponent<LayBombs>().bombCount++;//
             Destroy(transform.root.gameObject);
         }
         else if (other.tag == "Ground" && !landed)

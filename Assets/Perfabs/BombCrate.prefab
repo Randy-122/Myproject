@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 7921451818081079761}
   - component: {fileID: 2014713383072981636}
   - component: {fileID: 6489592191007190527}
+  - component: {fileID: 255094430462103373}
+  - component: {fileID: 2357749845168844371}
   m_Layer: 10
   m_HasEditorInfo: 1
   m_Name: prop_crate_ammo
@@ -172,6 +174,37 @@ CircleCollider2D:
   m_CompositeLayer: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 1.76
+--- !u!114 &255094430462103373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 717853869559585682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf11f8afe2bc4814881846cbffcde536, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pickupClip: {fileID: 8300000, guid: 5a21be2a29afc0b43afe4ac7e63f9637, type: 3}
+--- !u!114 &2357749845168844371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 717853869559585682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcb704aae5f81c84ba611e566c1e245b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bombRadius: 10
+  bombForce: 100
+  boom: {fileID: 8300000, guid: 935c301b2b1d00842a1b343d636d7b21, type: 3}
+  fuse: {fileID: 8300000, guid: 58ef48496ae7f3549a53b37c9ddca279, type: 3}
+  fuseTime: 1.5
+  explosion: {fileID: 1748257195654060673, guid: 94f05559e1714b646a08b580a3476304, type: 3}
 --- !u!1 &3592217259565235135
 GameObject:
   m_ObjectHideFlags: 0
@@ -183,7 +216,6 @@ GameObject:
   - component: {fileID: 3764554889214326969}
   - component: {fileID: 926568438578684786}
   - component: {fileID: 3926782991810026389}
-  - component: {fileID: 3044674011405088104}
   m_Layer: 10
   m_HasEditorInfo: 1
   m_Name: BombCrate
@@ -259,19 +291,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &3044674011405088104
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3592217259565235135}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf11f8afe2bc4814881846cbffcde536, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pickupClip: {fileID: 8300000, guid: 5a21be2a29afc0b43afe4ac7e63f9637, type: 3}
 --- !u!1 &6087465941035384908
 GameObject:
   m_ObjectHideFlags: 0

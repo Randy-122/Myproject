@@ -1,9 +1,9 @@
 {
-  "unity_port": -1,
+  "unity_port": 57751,
   "created_date": "2026-06-26T08:20:18.4008138Z",
   "project_path": "D:/unitylearn/HelloWorld/Myproject/Assets",
   "reloading": false,
-  "reason": "stopped",
+  "reason": "ready",
   "seq": 1,
-  "last_heartbeat": "2026-06-29T08:51:27.6628493Z"
+  "last_heartbeat": "2026-06-30T09:20:16.9786191Z"
 }
