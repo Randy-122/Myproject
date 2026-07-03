@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 7
   m_Component:
   - component: {fileID: 3292416925738993722}
-  m_Layer: 0
+  m_Layer: 11
   m_HasEditorInfo: 1
   m_Name: Frontcheck
   m_TagString: Untagged
@@ -42,7 +42,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3512169324784848318}
   - component: {fileID: 6922982189021745277}
-  m_Layer: 0
+  m_Layer: 11
   m_HasEditorInfo: 1
   m_Name: char_enemy_alienShip
   m_TagString: Enemy
@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: 5045699041329505441}
   - component: {fileID: 4404767785339330772}
   - component: {fileID: 7699140840680222102}
-  m_Layer: 0
+  m_Layer: 11
   m_HasEditorInfo: 1
   m_Name: Enemy1
   m_TagString: Enemy
@@ -180,6 +180,7 @@ MonoBehaviour:
   fullHealthSprite: {fileID: 21300000, guid: 3757687d37f7d4c5e895fe56f03cbc84, type: 3}
   lowHealthSprite: {fileID: 21300000, guid: bc16422a503ec43cab4ad9ddab02ff7a, type: 3}
   deathSprite: {fileID: 21300000, guid: 73fa5f80d4ddd4196b767cc01c1b5c68, type: 3}
+  currentHealth: 0
 --- !u!50 &5045699041329505441
 Rigidbody2D:
   serializedVersion: 4

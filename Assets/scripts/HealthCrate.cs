@@ -8,7 +8,13 @@ public class HealthCtarte : MonoBehaviour
     public AudioClip collect;
     public Animator anim;  //需要在初始化				
     private bool landed = false;
-    
+
+    private PickupSpawner pickupSpawner;
+
+    private void Start()
+    {
+        pickupSpawner = GameObject.Find("pickupManager").GetComponent<PickupSpawner>();
+    }
     void OnTriggerEnter2D(Collider2D other)
     {
         if (anim == null) 
@@ -22,6 +28,7 @@ public class HealthCtarte : MonoBehaviour
             playerHealth.health = Mathf.Clamp(playerHealth.health, 0f, 100f);
             playerHealth.UpdateHealthBar();
             AudioSource.PlayClipAtPoint(collect, transform.position);
+            pickupSpawner.StartCoroutine(pickupSpawner.DeliverPickup());
             Destroy(transform.root.gameObject);
         }
         else if (other.tag == "Ground" && !landed)
