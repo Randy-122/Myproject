@@ -279,7 +279,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5523193006172368609
 Transform:
   m_ObjectHideFlags: 0
@@ -360,5 +360,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBonus: 50
-  collect: {fileID: 8300000, guid: 5a21be2a29afc0b43afe4ac7e63f9637, type: 3}
+  collect: {fileID: 8300000, guid: 2a61c6a6ccc5e274ead23f59b96053e0, type: 3}
   anim: {fileID: 0}

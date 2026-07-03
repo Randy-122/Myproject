@@ -186,7 +186,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf11f8afe2bc4814881846cbffcde536, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pickupClip: {fileID: 8300000, guid: 5a21be2a29afc0b43afe4ac7e63f9637, type: 3}
+  pickupClip: {fileID: 8300000, guid: 0d5724c2948913042833b18c68c1f56f, type: 3}
 --- !u!114 &2357749845168844371
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -202,7 +202,7 @@ MonoBehaviour:
   bombRadius: 10
   bombForce: 100
   boom: {fileID: 8300000, guid: 935c301b2b1d00842a1b343d636d7b21, type: 3}
-  fuse: {fileID: 8300000, guid: 58ef48496ae7f3549a53b37c9ddca279, type: 3}
+  fuse: {fileID: 8300000, guid: 15673ab8cff0a8947abe22e4f64688c9, type: 3}
   fuseTime: 1.5
   explosion: {fileID: 1748257195654060673, guid: 94f05559e1714b646a08b580a3476304, type: 3}
 --- !u!1 &3592217259565235135

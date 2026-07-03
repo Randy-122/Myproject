@@ -7,7 +7,7 @@ public class Destoryer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Destroy(transform.gameObject);
+        Destroy(transform.gameObject, 0.5f);
     }
 
     // Update is called once per frame
