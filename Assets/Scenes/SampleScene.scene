@@ -2423,13 +2423,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4092825014152367855, guid: a62a7af992bdbff42a88368190677356, type: 3}
-      propertyPath: collect
-      value: 
-      objectReference: {fileID: 8300000, guid: 2a61c6a6ccc5e274ead23f59b96053e0, type: 3}
     - target: {fileID: 4112829316144140502, guid: a62a7af992bdbff42a88368190677356, type: 3}
       propertyPath: m_Name
       value: HealthCrate
+      objectReference: {fileID: 0}
+    - target: {fileID: 4112829316144140502, guid: a62a7af992bdbff42a88368190677356, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5523193006172368609, guid: a62a7af992bdbff42a88368190677356, type: 3}
       propertyPath: m_LocalPosition.x
