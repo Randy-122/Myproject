@@ -1872,6 +1872,15 @@ MonoBehaviour:
   dropRangeRight: 10
   highHealthThreshold: 75
   lowHealthThreshold: 25
+  swanPrefab: {fileID: 100000, guid: 3106ad1eef52954468906839938f08c5, type: 3}
+  swanSpawnInterval: 3
+  swanSpeed: 5
+  swanDestroyTime: 10
+  cabPrefab: {fileID: 100002, guid: 117b811cdfd5e5c49b1f4fe769f1466f, type: 3}
+  busPrefab: {fileID: 100002, guid: 56659eb4970fde4438e38608ef15cda0, type: 3}
+  vehicleSpawnInterval: 4
+  vehicleSpeed: 6
+  vehicleDestroyTime: 15
 --- !u!1 &1460961697
 GameObject:
   m_ObjectHideFlags: 0
@@ -2886,6 +2895,10 @@ PrefabInstance:
     - target: {fileID: 4635999955011900095, guid: 3cff10675225f7440a3a218f7158561d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7079458166287544630, guid: 3cff10675225f7440a3a218f7158561d, type: 3}
+      propertyPath: m_Material
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

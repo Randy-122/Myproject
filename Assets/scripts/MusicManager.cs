@@ -14,9 +14,9 @@ public class MusicMixer : MonoBehaviour
 
     private float savedVolume;
     private bool isPaused = false;
-    public Text scoreText;
+    
 
-    public int score = 0;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -64,9 +64,5 @@ public class MusicMixer : MonoBehaviour
         }
     }
 
-    public void AddScore(int points)
-    {
-        score += points;
-        scoreText.text = "Score: " + score;
-    }
+    
 }
