@@ -17,6 +17,7 @@ public class MusicMixer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         if (audioMixer != null) 
         {
             if (Input.GetKeyDown(KeyCode.DownArrow)) 

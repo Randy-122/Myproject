@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class Gun : MonoBehaviour
 {
@@ -23,6 +24,14 @@ public class Gun : MonoBehaviour
         {
             if (Input.GetButtonDown("Fire1"))
             {
+                if (EventSystem.current.IsPointerOverGameObject())
+                    return;
+
+                if (Time.timeScale == 0) 
+                {
+                    return; // 游戏暂停时不发射火箭
+                }
+
                 if (audioSource != null) audioSource.Play();
                 animator.SetTrigger("shoot");
                 float zRotation = playerCtrl.bFaceRight ? 0f : 180f;
