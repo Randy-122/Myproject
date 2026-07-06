@@ -11,6 +11,8 @@ public class UIManager : MonoBehaviour
     public Button button;
     public AudioMixer audioMixer;
 
+    public TMPro.TMP_Text scoreText;
+    public int score = 0;
     private bool bPause = false;
     void Start()
     {
@@ -41,5 +43,11 @@ public class UIManager : MonoBehaviour
     public void OnValueChanged(float newValue) 
     {
         audioMixer.SetFloat("mainVolume", newValue);
+    }
+
+    public void AddScore(int points)
+    {
+        score += points;
+        scoreText.text = "Score: " + score;
     }
 }

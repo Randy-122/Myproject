@@ -20,9 +20,11 @@ public class ShipController : MonoBehaviour
     private bool isDead;
     private bool isFacingRight = true; // 明确声明朝向（默认向右）
 
+    private UIManager uIManager;
     void Awake()
     {
         // 初始化组件（避免Start中空引用）
+        uIManager = GameObject.Find("UIManager").GetComponent<UIManager>();
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         currentHealth = maxHealth;
@@ -81,7 +83,14 @@ public class ShipController : MonoBehaviour
     // ✅ 核心需求实现：死亡逻辑
     private void Die()
     {
+        if (!isDead) 
+        {
+            uIManager.AddScore(100); // 死亡加分
+        }
+
+        
         isDead = true;
+        
         spriteRenderer.sprite = deathSprite;
 
         // 1. 所有碰撞体设为Trigger（停止碰撞检测）

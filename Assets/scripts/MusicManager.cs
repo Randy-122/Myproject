@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.SocialPlatforms.Impl;
+using UnityEngine.UI;
 
 public class MusicMixer : MonoBehaviour
 {
@@ -12,6 +14,9 @@ public class MusicMixer : MonoBehaviour
 
     private float savedVolume;
     private bool isPaused = false;
+    public Text scoreText;
+
+    public int score = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -57,5 +62,11 @@ public class MusicMixer : MonoBehaviour
             audioMixer.SetFloat("mainVolume", savedVolume);
             isPaused = false;
         }
+    }
+
+    public void AddScore(int points)
+    {
+        score += points;
+        scoreText.text = "Score: " + score;
     }
 }
