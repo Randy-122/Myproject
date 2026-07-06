@@ -38,6 +38,7 @@ public class UIManager : MonoBehaviour
         {
             bombicon.enabled = true;
             bombCount.enabled = true;
+            bombCount.text = layBombs.bombCount.ToString();
         }
     }
 
