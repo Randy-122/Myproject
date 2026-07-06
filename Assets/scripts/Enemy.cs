@@ -21,6 +21,7 @@ public class ShipController : MonoBehaviour
     private bool isFacingRight = true; // 明确声明朝向（默认向右）
 
     private UIManager uIManager;
+    public GameObject addScore; 
     void Awake()
     {
         // 初始化组件（避免Start中空引用）
@@ -85,6 +86,23 @@ public class ShipController : MonoBehaviour
     {
         if (!isDead) 
         {
+            // 1. 获取主摄像机（确保你的相机标签是 MainCamera）
+            Camera mainCam = Camera.main;
+
+            // 2. 核心步骤：将敌人的【世界坐标】转换为【屏幕坐标】
+            Vector3 screenPos = mainCam.WorldToScreenPoint(transform.position);
+
+            // 3. 找到 Canvas
+            Transform canvasTransform = GameObject.Find("Canvas").transform;
+
+            if (canvasTransform != null && addScore != null)
+            {
+                // 4. 生成时传入转换后的 screenPos
+                // 注意：最后一个参数 false 表示不锁定局部坐标，直接使用传入的世界/屏幕坐标
+                Instantiate(addScore, screenPos, Quaternion.identity, canvasTransform);
+            }
+
+
             uIManager.AddScore(100); // 死亡加分
         }
 

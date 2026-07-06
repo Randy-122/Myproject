@@ -181,6 +181,7 @@ MonoBehaviour:
   lowHealthSprite: {fileID: 21300000, guid: bc16422a503ec43cab4ad9ddab02ff7a, type: 3}
   deathSprite: {fileID: 21300000, guid: 73fa5f80d4ddd4196b767cc01c1b5c68, type: 3}
   currentHealth: 0
+  addScore: {fileID: 1713259131229832776, guid: 52c3ecbdcd616a74c9fe84513fa98243, type: 3}
 --- !u!50 &5045699041329505441
 Rigidbody2D:
   serializedVersion: 4
