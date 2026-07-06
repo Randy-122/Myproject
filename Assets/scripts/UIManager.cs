@@ -10,13 +10,18 @@ public class UIManager : MonoBehaviour
     public Slider slider;
     public Button button;
     public AudioMixer audioMixer;
+    public TMPro.TMP_Text bombCount;
+    public Image bombicon;
 
     public TMPro.TMP_Text scoreText;
     public int score = 0;
     private bool bPause = false;
+
+    private LayBombs layBombs;
+
     void Start()
     {
-        
+        layBombs = GameObject.Find("Hero").GetComponent<LayBombs>();
         button.onClick.AddListener(Pauser);
         slider.onValueChanged.AddListener(OnValueChanged);
     }
@@ -24,7 +29,16 @@ public class UIManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (layBombs.bombCount == 0)
+        {
+            bombicon.enabled = false;
+            bombCount.enabled = false;
+        }
+        else
+        {
+            bombicon.enabled = true;
+            bombCount.enabled = true;
+        }
     }
 
     void Pauser() 

@@ -3,7 +3,11 @@ using UnityEngine;
 public class Rocket : MonoBehaviour
 {
     public GameObject explosion;
-
+    private PickupSpawner pickupSpawner;
+    private void Start()
+    {
+        pickupSpawner = GameObject.Find("pickupManager").GetComponent<PickupSpawner>();
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         // 1. 跳过玩家（保持不变）
@@ -31,6 +35,17 @@ public class Rocket : MonoBehaviour
                 $"but missing ShipController on itself OR parent! " +
                 $"Check hierarchy: {GetParentChain(collision.transform)}"
             );
+        }
+        else if (collision.CompareTag("BombCrate")) 
+        {
+            if (explosion != null)
+            {
+                Quaternion randomRot = Quaternion.Euler(0, 0, Random.Range(0f, 180f));
+                Instantiate(explosion, transform.position, randomRot);
+            }
+            Destroy(gameObject);
+            Destroy(collision.gameObject); 
+            pickupSpawner.StartCoroutine(pickupSpawner.DeliverPickup());
         }
 
         // 5. 爆炸和销毁逻辑（保持不变）

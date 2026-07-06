@@ -8,6 +8,8 @@ TagManager:
   - Tower
   - HealthBar
   - Ground
+  - ExplosionFX
+  - BombCrate
   layers:
   - Default
   - TransparentFX
