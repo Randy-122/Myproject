@@ -12,7 +12,7 @@ GameObject:
   m_Layer: 11
   m_HasEditorInfo: 1
   m_Name: Frontcheck
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -156,7 +156,7 @@ MonoBehaviour:
   moveSpeed: 3.5
   deathSprite: {fileID: 21300000, guid: bd1989b4e42a0454097f657dfb368bd8, type: 3}
   currentHealth: 1
-  addScore: {fileID: 0}
+  addScore: {fileID: 1713259131229832776, guid: 52c3ecbdcd616a74c9fe84513fa98243, type: 3}
 --- !u!58 &6288106460359899408
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -191,8 +191,8 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeLayer: 0
-  m_Offset: {x: 0, y: 0}
-  m_Radius: 0.5
+  m_Offset: {x: 0, y: 0.19947147}
+  m_Radius: 2.2952442
 --- !u!1 &6692120376709452648
 GameObject:
   m_ObjectHideFlags: 0
@@ -206,7 +206,7 @@ GameObject:
   m_Layer: 0
   m_HasEditorInfo: 1
   m_Name: enemy1-eyelid
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -294,7 +294,7 @@ GameObject:
   m_Layer: 0
   m_HasEditorInfo: 1
   m_Name: enemy1-body
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -382,7 +382,7 @@ GameObject:
   m_Layer: 0
   m_HasEditorInfo: 1
   m_Name: enemy1-tail
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -470,7 +470,7 @@ GameObject:
   m_Layer: 0
   m_HasEditorInfo: 1
   m_Name: enemy1-eye
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

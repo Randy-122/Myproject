@@ -92,6 +92,7 @@ public class ShipController2 : MonoBehaviour
 
             if (canvasTransform != null && addScore != null)
             {
+                Debug.Log("1233211");
                 // 4. 生成时传入转换后的 screenPos
                 Instantiate(addScore, screenPos, Quaternion.identity, canvasTransform);
             }

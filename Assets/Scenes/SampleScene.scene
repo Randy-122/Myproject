@@ -1880,11 +1880,6 @@ MonoBehaviour:
   vehicleSpawnInterval: 4
   vehicleSpeed: 6
   vehicleDestroyTime: 15
---- !u!1 &1381156058 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1713259131229832776, guid: 52c3ecbdcd616a74c9fe84513fa98243, type: 3}
-  m_PrefabInstance: {fileID: 6890322357146600618}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1460961697
 GameObject:
   m_ObjectHideFlags: 0
@@ -3195,7 +3190,7 @@ PrefabInstance:
     - target: {fileID: 1338602409257037243, guid: 668b844435ade854e89a1093430f657c, type: 3}
       propertyPath: addScore
       value: 
-      objectReference: {fileID: 1381156058}
+      objectReference: {fileID: 1713259131229832776, guid: 52c3ecbdcd616a74c9fe84513fa98243, type: 3}
     - target: {fileID: 2076159219161842737, guid: 668b844435ade854e89a1093430f657c, type: 3}
       propertyPath: m_TagString
       value: Enemy
@@ -3615,10 +3610,6 @@ PrefabInstance:
     - target: {fileID: 6962867933923514708, guid: 52c3ecbdcd616a74c9fe84513fa98243, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7363841272361811557, guid: 52c3ecbdcd616a74c9fe84513fa98243, type: 3}
-      propertyPath: m_Enabled
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
